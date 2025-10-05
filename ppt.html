@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Planning Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .slide-content {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            width: 90%;
+            max-width: 900px;
+            height: 90%;
+            max-height: 550px;
+        }
+        .nav-button {
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .nav-button:hover {
+            background-color: #2563eb; /* Blue-600 */
+            transform: translateY(-2px);
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af; /* Gray-400 */
+            cursor: not-allowed;
+            transform: none;
+        }
+        .speaker-tag {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #4338ca; /* Indigo-800 */
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Presentation Container -->
+    <div id="presentation-container" class="relative w-full h-full max-w-4xl" style="aspect-ratio: 16 / 9;">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active items-center justify-center p-8 text-center" id="slide-1">
+            <div class="slide-content flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">What Matters Most When Planning a Holiday?</h1>
+                <p class="text-xl md:text-2xl opacity-90">Distance, Activities, or Cost?</p>
+                <div class="mt-8 border-t border-white/30 pt-4 text-sm">
+                    <p class="font-semibold">Presented By:</p>
+                    <p>Oindrilla, Shagnik, Vivek, Kalyan, Affan, Roshan, Hasini, & Priyanshu</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Introduction -->
+        <div class="slide" id="slide-2">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Introduction: The Holiday Dilemma</h2>
+                    <span class="speaker-tag">Oindrilla</span>
+                </div>
+                <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                    <li>Welcome and team introduction.</li>
+                    <li>Posing the central question: What do we prioritize when planning a trip?</li>
+                    <li>Our presentation will explore three key factors to help answer this.</li>
+                    <li>Let's begin with a look at distance and travel time.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Distance & Travel Time (Shagnik) -->
+        <div class="slide" id="slide-3">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 1: The Appeal of a Quick Getaway</h2>
+                    <span class="speaker-tag">Shagnik</span>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-6xl text-blue-500">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                        <li>Nearby destinations are convenient for short breaks and weekends.</li>
+                        <li>Saves travel hours, leading to more enjoyment and less stress.</li>
+                        <li>Ideal for tight schedules and spontaneous trips.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Distance & Travel Time (Vivek) -->
+        <div class="slide" id="slide-4">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 1: The Journey is the Destination</h2>
+                    <span class="speaker-tag">Vivek</span>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-6xl text-blue-500">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                        <li>Sometimes, long journeys are cherished adventures in themselves.</li>
+                        <li>Road trips and scenic train rides offer bonding time and unique experiences.</li>
+                        <li>While practicality is key, the journey itself can hold great value.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Activities & Attractions (Kalyan) -->
+        <div class="slide" id="slide-5">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 2: The Heart of the Holiday</h2>
+                    <span class="speaker-tag">Kalyan</span>
+                </div>
+                <p class="text-lg text-gray-700 mb-4">Activities and attractions are at the core of a memorable trip. India offers a huge variety of experiences:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <i class="fas fa-swimmer text-3xl text-indigo-500 mb-2"></i>
+                        <h3 class="font-semibold">Adventure</h3>
+                        <p class="text-sm">Scuba in Goa, Trekking in Manali</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <i class="fas fa-landmark text-3xl text-indigo-500 mb-2"></i>
+                        <h3 class="font-semibold">History</h3>
+                        <p class="text-sm">Exploring forts in Jaipur</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <i class="fas fa-masks-theater text-3xl text-indigo-500 mb-2"></i>
+                        <h3 class="font-semibold">Culture</h3>
+                        <p class="text-sm">Vibrant festivals in Kolkata</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Activities & Attractions (Affan) -->
+        <div class="slide" id="slide-6">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 2: Catering to the Crew</h2>
+                    <span class="speaker-tag">Affan</span>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                     <div class="text-6xl text-blue-500">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                        <li>A group's shared interests will shape the ideal destination.</li>
+                        <li>Some prefer adventure (rafting), others culture (food tours, temples).</li>
+                        <li>Discussing preferences ensures everyone enjoys the trip together.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Activities & Attractions (Roshan) -->
+        <div class="slide" id="slide-7">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 2: Plan Ahead for a Smooth Trip</h2>
+                    <span class="speaker-tag">Roshan</span>
+                </div>
+                 <div class="flex flex-col md:flex-row items-center gap-8">
+                     <div class="text-6xl text-blue-500">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                        <li>Proper planning makes a huge difference for activities and attractions.</li>
+                        <li>Booking tickets for popular sites and checking opening hours avoids last-minute hassles.</li>
+                        <li>Making reservations for trekking or adventure sports is essential.</li>
+                        <li>Smart planning helps balance adventure and relaxation.</li>
+                        <li>Ensures each day has just enough fun without exhaustion.</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Cost (Hasini) -->
+        <div class="slide" id="slide-8">
+             <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Factor 3: Budgeting for a Stress-Free Holiday</h2>
+                    <span class="speaker-tag">Hasini</span>
+                </div>
+                 <div class="flex flex-col md:flex-row items-center gap-8">
+                     <div class="text-6xl text-blue-500">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+                        <li>The cost of a trip is a crucial factor for most, especially students.</li>
+                        <li>Planning ahead helps find deals and avoid unnecessary expenses.</li>
+                        <li>Group travel often reduces costs.</li>
+                        <li>A good budget keeps the holiday enjoyable, not stressful.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Conclusion (Priyanshu) -->
+        <div class="slide" id="slide-9">
+            <div class="slide-content flex flex-col justify-center p-8 md:p-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <h2 class="text-3xl font-bold text-gray-800">Conclusion: Finding the Perfect Balance</h2>
+                    <span class="speaker-tag">Priyanshu</span>
+                </div>
+                <p class="text-lg text-gray-700 mb-6">A successful trip is one that blends all three factors. The goal is to match your group's preferences and resources for a memorable, enjoyable, and stress-free holiday.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-blue-800">Convenient Access</h3>
+                        <p class="text-sm text-blue-700">Distance & Time</p>
+                    </div>
+                    <div class="bg-indigo-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-indigo-800">Exciting Experiences</h3>
+                        <p class="text-sm text-indigo-700">Activities & Attractions</p>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-green-800">Sensible Budgeting</h3>
+                        <p class="text-sm text-green-700">Cost of Trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Thank You -->
+        <div class="slide" id="slide-10">
+            <div class="slide-content flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+                <h1 class="text-5xl font-bold mb-4">Thank You!</h1>
+                <p class="text-2xl opacity-90"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex items-center justify-between w-full max-w-4xl mt-4">
+        <button id="prev-btn" class="nav-button">
+            <i class="fas fa-arrow-left mr-2"></i> Previous
+        </button>
+        <span id="slide-counter" class="text-gray-600 font-medium">1 / 10</span>
+        <button id="next-btn" class="nav-button">
+            Next <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentSlide);
+                });
+                slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) {
+                    nextBtn.click();
+                } else if (e.key === 'ArrowLeft' && currentSlide > 0) {
+                    prevBtn.click();
+                }
+            });
+
+            // Initial setup
+            updateSlides();
+        });
+    </script>
+</body>
+</html>
